@@ -1,6 +1,15 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.2",
+    "dotenv": "^16.4.2",
     "react-bootstrap": "^2.10.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "startServer": "nodemon ./server/server.js",
+    "db:reset": "node db/resetdb.js"
   }
 }
