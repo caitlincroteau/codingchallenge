@@ -1,8 +1,10 @@
 
-DROP TABLE IF EXISTS cities CASCADE;
+DROP TABLE IF EXISTS cities;
 
 CREATE TABLE cities (
-  city_id SERIAL PRIMARY KEY NOT NULL,
+  city_id SERIAL NOT NULL,
   city_name VARCHAR(255) NOT NULL,
-  heath_authority_id INTEGER REFERNCES health_authorities(id)
-);
+  health_authrity_id INTEGER,
+  PRIMARY KEY (city_id),
+  FOREIGN KEY (heath_authority_id) REFERNCES health_authorities(heath_authority_id)
+  );
