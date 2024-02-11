@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS clients CASCADE;
 CREATE TABLE clients (
   year INTEGER NOT NULL,
   active BOOLEAN NOT NULL DEFAULT 1,
-  client_id SERIAL PRIMARY KEY NOT NULL,
+  client_id INTEGER PRIMARY KEY NOT NULL,
   first_name VARCHAR(255) NOT NULL,
   last_name VARCHAR(255) NOT NULL,
   gender VARCHAR(255) NOT NULL,
@@ -20,5 +20,5 @@ CREATE TABLE clients (
   pssg BOOLEAN NOT NULL,
   status VARCHAR(255),
   deceased DATE
-  
+
 );
