@@ -1,17 +1,25 @@
-
+import "../styles/SearchBar.css";
+import React, { useState } from "react";
 
 export default function SearchBar(props) {
+  const [input, setInput] = useState("");
+
+  // const fetchData = (value) => {
+
+  // }
+
+  const handleChange = (value) => {
+    setInput(value);
+    // fetchData(value);
+  };
+
   return (
-    <>
-      <Form>
-        <Form.Group controlId="searchBar">
-          <Form.Control
-            type="text"
-            placeholder={props.placeholder}
-            onChange={props.searchPlant}
-          />
-        </Form.Group>
-      </Form>
-    </>
+    <div className="input-wrapper">
+      <input
+        placeholder="Type to search"
+        value={input}
+        onChange={(e) => handleChange(e.target.value)}
+      />
+    </div>
   );
 }
