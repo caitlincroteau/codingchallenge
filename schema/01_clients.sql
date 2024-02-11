@@ -20,4 +20,4 @@ CREATE TABLE clients (
   status VARCHAR(255),
   deceased BOOLEAN NOT NULL,
   city_id INTEGER REFERENCES cities(id)
-)
+);
