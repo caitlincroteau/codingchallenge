@@ -1,5 +1,5 @@
 
-DROP TABLE IF EXISTS clients;
+DROP TABLE IF EXISTS `clients`;
 
 CREATE TABLE `clients` (
   `year` INT(4) NOT NULL,
@@ -20,5 +20,5 @@ CREATE TABLE `clients` (
   `pssg` BOOLEAN NOT NULL,
   `status` VARCHAR(255),
   `deceased` DATE,
-  FOREIGN KEY (city_name) REFERENCES cities(city_name)
+  FOREIGN KEY (`city_name`) REFERENCES `cities`(`city_name`)
 );
