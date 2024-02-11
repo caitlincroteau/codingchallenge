@@ -1,10 +1,9 @@
 
 
-DROP TABLE IF EXISTS `notes`;
+DROP TABLE IF EXISTS notes CASCADE;
 
-CREATE TABLE `notes` (
-  `note_id` SERIAL PRIMARY KEY NOT NULL,
-  `note_date` DATE NOT NULL DEFAULT CURRENT_DATE,
-  `client_id` INTEGER,
-  FOREIGN KEY (`client_id`) REFERENCES `clients`(`client_id`)
+CREATE TABLE notes (
+  note_id SERIAL PRIMARY KEY NOT NULL,
+  note_date DATE NOT NULL DEFAULT CURRENT_DATE,
+  client_id INTEGER REFERENCES clients(id) ON DELETE CASCADE
 );
